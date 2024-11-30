@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Canais</title>
     <style>
+        body {
+            background-color: #000; /* Fundo preto */
+            color: #fff; /* Texto branco para contraste */
+            font-family: Arial, sans-serif; /* Fonte padrão */
+        }
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px; /* Espaçamento superior */
         }
         th, td {
             border: 1px solid #ddd;
@@ -15,68 +21,56 @@
             text-align: center;
         }
         th {
-            background-color: #080000;
+            background-color: #080000; /* Cor do cabeçalho */
+            color: white; /* Texto do cabeçalho em branco */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            td {
+                display: block;
+                width: 100%;
+            }
         }
     </style>
 </head>
->
-
-
 <body>
-
-<h1>Lista de Canais</h1>
-
-<table>
-    <tr>
-        <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv1.html"><img src="sport-tv-1.png" alt="Sporttv1">Sporttv1</a></td>
-        <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv2.html"><img src="sport-tv-2.png" alt="Sporttv2">Sporttv2</a></td>
-        <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv3.html"><img src="sport-tv-3.png" alt="Sporttv3">Sporttv3</a></td>
-    </tr>
-    <tr>
-        <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv4.html"><img src="sport-tv-4.png" alt="Sporttv4">Sporttv4</a></td>
-        <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv5.html"><img src="sport-tv-5.png" alt="Sporttv5">Sporttv5</a></td>
-        <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv6.html"><img src="sport-tv-6.png" alt="Sporttv6">Sporttv6</a></td>
-    </tr>
-    <tr>
-        <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv7.html"><img src="hsport-tv-7.png" alt="Sporttv7">Sporttv7</a></td>
-        <td><a href="#"><img src="https://example.com/dazn1-logo.png" alt="DAZN1">DAZN1</a></td>
-        <td><a href="#"><img src="https://example.com/dazn2-logo.png" alt="DAZN2">DAZN2</a></td>
-    </tr>
-    <tr>
-        <td><a href="#"><img src="https://example.com/dazn3-logo.png" alt="DAZN3">DAZN3</a></td>
-        <td><a href="#"><img src="https://example.com/dazn4-logo.png" alt="DAZN4">DAZN4</a></td>
-        <td><a href="#"><img src="https://example.com/dazn5-logo.png" alt="DAZN5">DAZN5</a></td>
-    </tr>
-    <tr>
-        <td><a href="#"><img src="https://example.com/dazn6-logo.png" alt="DAZN6">DAZN6</a></td>
-        <td><a href="#"><img src="https://example.com/benficatv-logo.png" alt="BenficaTV">BenficaTV</a></td>
-        <td></td> <!-- Coluna vazia para manter a estrutura -->
-    </tr>
-</table>
-
-</body>
-</html>
-    <tr>
-        <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv4.html">Sporttv4</a></td>
-        <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv5.html">Sporttv5</a></td>
-        <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv6.html">Sporttv6</a></td>
-    </tr>
-    <tr>
-        <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv7.html">Sporttv7</a></td>
-        <td><a href="#">DAZN1</a></td>
-        <td><a href="#">DAZN2</a></td>
-    </tr>
-    <tr>
-        <td><a href="#">DAZN3</a></td>
-        <td><a href="#">DAZN4</a></td>
-        <td><a href="#">DAZN5</a></td>
-    </tr>
-    <tr>
-        <td><a href="#">DAZN6</a></td>
-        <td><a href="#">BenficaTV</a></td>
-        <td></td> <!-- Coluna vazia para manter a estrutura -->
-    </tr>
-</table>
-
+    <h1>Lista de Canais</h1>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">Canais Esportivos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv1.html"><img src="sport-tv-1.png" alt="Sporttv1">Sporttv1</a></td>
+                <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv2.html"><img src="sport-tv-2.png" alt="Sporttv2">Sporttv2</a></td>
+                <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv3.html"><img src="sport-tv-3.png" alt="Sporttv3">Sporttv3</a></td>
+            </tr>
+            <tr>
+                <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv4.html"><img src="sport-tv-4.png" alt="Sporttv4">Sporttv4</a></td>
+                <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv5.html"><img src="sport-tv-5.png" alt="Sporttv5">Sporttv5</a></td>
+                <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv6.html"><img src="sport-tv-6.png" alt="Sporttv6">Sporttv6</a></td>
+            </tr>
+            <tr>
+                <td><a href="https://nelsonsabino.github.io/tvdesporto/sporttv7.html"><img src="sport-tv-7.png" alt="Sporttv7">Sporttv7</a></td> <!-- Corrigido o nome da imagem -->
+                <td><a href="#"><img src="https://example.com/dazn1-logo.png" alt="DAZN1">DAZN1</a></td> <!-- Adicione o link correto -->
+                <td><a href="#"><img src="https://example.com/dazn2-logo.png" alt="DAZN2">DAZN2</a></td> <!-- Adicione o link correto -->
+            </tr>
+            <tr>
+                <td><a href="#"><img src="https://example.com/dazn3-logo.png" alt="DAZN3">DAZN3</a></td> <!-- Adicione o link correto -->
+                <td><a href="#"><img src="https://example.com/dazn4-logo.png" alt="DAZN4">DAZN4</a></td> <!-- Adicione o link correto -->
+                <td><a href="#"><img src="https://example.com/dazn5-logo.png" alt="DAZN5">DAZN5</a></td> <!-- Adicione o link correto -->
+            </tr>
+            <tr>
+                <td><a href="#"><img src="https://example.com/dazn6-logo.png" alt="DAZN6">DAZN6</a></td> <!-- Adicione o link correto -->
+                <td><a href="#"><img src="https://example.com/benficatv-logo.png" alt="BenficaTV">BenficaTV</a></td> <!-- Adicione o link correto -->
+                <td></td> <!-- Coluna vazia para manter a estrutura -->
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
