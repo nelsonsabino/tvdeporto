@@ -1,1 +1,35 @@
-
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmissão Sport TV 7</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            position: absolute;
+            top: -100px;  /* Ajuste este valor para esconder o menu superior */
+            left: 0;
+            width: 100%;
+            height: calc(70% + 200px);  /* Aumenta a altura para compensar o deslocamento */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe src="https://www.pirilampo.tv/live-tv/sport-tv-7.html" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
