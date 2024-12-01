@@ -8,16 +8,15 @@
         body, html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden; /* Impede o scroll da página */
-            position: fixed; /* Garante que a página não role */
+            height: 100vh; /* Garante que o corpo ocupe 100% da altura da janela */
+            width: 100vw; /* Garante que o corpo ocupe 100% da largura da janela */
+            overflow: hidden; /* Desativa o scroll completamente */
         }
         .iframe-container {
             position: relative;
             width: 100%;
             height: 800px; /* Limita a altura visível do iframe */
-            overflow: hidden; /* Garante que apenas 800px do iframe fiquem visíveis */
+            overflow: hidden; /* Garante que o iframe não ultrapasse a área */
         }
         iframe {
             position: absolute;
