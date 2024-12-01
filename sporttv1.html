@@ -9,29 +9,27 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden;
+            overflow: hidden; /* Impede o scroll da página */
         }
         .iframe-container {
             position: relative;
             width: 100%;
-            height: 100%;
-            overflow: hidden;
+            height: 200px; /* Limita a altura visível do iframe */
+            overflow: hidden; /* Garante que apenas 200px do iframe fiquem visíveis */
         }
         iframe {
             position: absolute;
-            top: -100px;
+            top: -100px; /* Move o conteúdo 100px para cima */
             left: 0;
             width: 100%;
-            height: calc(70% + 200px);
+            height: calc(100% + 200px); /* Ajusta a altura do iframe para permitir o recorte */
             border: none;
-            overflow: hidden;
-            pointer-events: none;
         }
     </style>
 </head>
 <body>
     <div class="iframe-container">
-        <iframe src="https://www.pirilampo.tv/live-tv/sport-tv-1.html" allowfullscreen ></iframe>
+        <iframe src="https://www.pirilampo.tv/live-tv/sport-tv-1.html" allowfullscreen></iframe>
     </div>
 </body>
 </html>
