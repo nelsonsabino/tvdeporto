@@ -9,13 +9,15 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            width: 100%;
             overflow: hidden; /* Impede o scroll da página */
+            position: fixed; /* Garante que a página não role */
         }
         .iframe-container {
             position: relative;
             width: 100%;
             height: 800px; /* Limita a altura visível do iframe */
-            overflow: hidden; /* Garante que apenas x do iframe fiquem visíveis */
+            overflow: hidden; /* Garante que apenas 800px do iframe fiquem visíveis */
         }
         iframe {
             position: absolute;
@@ -26,13 +28,6 @@
             border: none;
         }
     </style>
-    <script>
-        // Garante que o scroll seja bloqueado no carregamento
-        window.onload = () => {
-            document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden';
-        };
-    </script>
 </head>
 <body>
     <div class="iframe-container">
