@@ -5,32 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transmissão Sport TV 1</title>
     <style>
-        body, html {
+        html, body {
             margin: 0;
             padding: 0;
-            height: 100vh; /* Garante que o corpo ocupe 100% da altura da janela */
-            width: 100vw; /* Garante que o corpo ocupe 100% da largura da janela */
-            overflow: hidden; /* Desativa o scroll completamente */
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
         }
         .iframe-container {
             position: relative;
             width: 100%;
-            height: 800px; /* Limita a altura visível do iframe */
-            overflow: hidden; /* Garante que o iframe não ultrapasse a área */
+            height: 800px;
+            overflow: hidden;
         }
         iframe {
             position: absolute;
-            top: -100px; /* Move o conteúdo 100px para cima */
+            top: -100px;
             left: 0;
             width: 100%;
-            height: calc(100% + 200px); /* Ajusta a altura do iframe para permitir o recorte */
+            height: calc(100% + 200px);
             border: none;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
     <div class="iframe-container">
-        <iframe src="https://www.pirilampo.tv/live-tv/sport-tv-1.html" allowfullscreen></iframe>
+        <iframe src="https://www.pirilampo.tv/live-tv/sport-tv-1.html" allowfullscreen scrolling="no"></iframe>
     </div>
 </body>
 </html>
