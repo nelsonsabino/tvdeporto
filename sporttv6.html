@@ -5,31 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transmissão Sport TV 6</title>
     <style>
-        body, html {
+        html, body {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden; /* Garante que não haja rolagem na página principal */
         }
         .iframe-container {
             position: relative;
             width: 100%;
-            height: 100%;
-            overflow: hidden;
+            height: 800px; /* Altura padrão para dispositivos maiores */
+            overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites */
         }
         iframe {
             position: absolute;
-            top: -100px;  /* Ajuste este valor para esconder o menu superior */
+            top: -100px; /* Remove os 100px superiores */
             left: 0;
             width: 100%;
-            height: calc(70% + 200px);  /* Aumenta a altura para compensar o deslocamento */
+            height: 1000px; /* Altura suficiente para cobrir o deslocamento */
             border: none;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 768px) {
+            .iframe-container {
+                height: 300px; /* Reduz a altura visível para 200px em telas menores */
+            }
+            iframe {
+                height: 400px; /* Ajusta a altura do iframe para cobrir o deslocamento */
+            }
         }
     </style>
 </head>
 <body>
     <div class="iframe-container">
-        <iframe src="https://www.pirilampo.tv/live-tv/sport-tv-6.html" allowfullscreen></iframe>
+        <iframe 
+            src="https://www.pirilampo.tv/live-tv/sport-tv-6.html" 
+            allowfullscreen 
+            scrolling="no">
+        </iframe>
     </div>
+    <script>
+        // Tenta bloquear o scroll no iframe (caso seja permitido pelo mesmo domínio)
+        document.querySelector('iframe').addEventListener('load', function() {
+            try {
+                const iframeDoc = this.contentDocument || this.contentWindow.document;
+                if (iframeDoc) {
+                    iframeDoc.body.style.overflow = 'hidden'; // Bloqueia o scroll no corpo do iframe
+                }
+            } catch (e) {
+                console.warn('Não foi possível modificar o iframe devido a políticas de segurança (cross-origin).');
+            }
+        });
+    </script>
 </body>
 </html>
